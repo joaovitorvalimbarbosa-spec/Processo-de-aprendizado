@@ -1,0 +1,12 @@
+#include <stdio.h>
+    int main(){
+        int yearsold = 22;
+        float heigth = 1.81;
+        char letra = 'b';
+        char name [100] = "João Vitor";
+       
+
+
+        printf("this git hub belongs to %s , he has %d years old, and %f of heigth\n", name, yearsold, heigth);
+       
+    }
