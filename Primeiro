@@ -1,0 +1,7 @@
+//Processo-de-aprendizado
+//Minha jornada do zero até a programação.
+#include <stdio.h>
+  int main (){
+    printf("Hello World!\n");
+    return 0;
+}
