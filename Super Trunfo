@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+    
+//Inserindo as Cartas no jogo
+   struct Carta{
+    char nome [50];
+    int populacao;
+    float area;
+    float PIB;
+    int turismo;
+   };
+
+ int main(){
+    //Apresentção do Jogo:
+  printf("Super Trunfo\n");
+  printf("Cartas disponiveis:\n Brazil, USA, England, China, Japan\n");
+
+  srand(time(NULL));
+
+   struct Carta cartas[5]={
+{"Brazil", 213, 8510000, 2.1, 23},
+{"USA", 333, 9834000, 26.9, 25},
+{"England", 67, 243000, 3.1, 33},
+{"China", 1410, 9597000, 17.7, 57},
+{"Japan", 125, 378000, 4.2, 25},
+ };
+
+ int jogador = rand () %5;
+ int computador = rand () %5;
+
+printf("Sua carta: %s\n", cartas[jogador].nome);
+printf("Carta do computador: %s\n", cartas[computador].nome);
+
+
+ int escolha;
+printf("Escolha um atributo:\n");
+    printf("1 - população\n");
+    printf("2 - Area\n");
+    printf("3 - PIB\n");
+    printf("4 - pontos turisticos\n");
+
+    scanf("%d", &escolha);
+
+     if(escolha == 1){
+
+        printf("Populacao jogador: %d\n", cartas[jogador].populacao);
+        printf("Populacao computador: %d\n", cartas[computador].populacao);
+
+        if(cartas[jogador].populacao > cartas[computador].populacao)
+            printf("\nVoce venceu!\n");
+        else if(cartas[jogador].populacao < cartas[computador].populacao)
+            printf("\nComputador venceu!\n");
+        else
+            printf("\nEmpate!\n");
+    }
+
+    if(escolha == 2){
+
+        printf("Area jogador: %.0f\n", cartas[jogador].area);
+        printf("Area computador: %.0f\n", cartas[computador].area);
+
+        if(cartas[jogador].area > cartas[computador].area)
+            printf("\nVoce venceu!\n");
+        else if(cartas[jogador].area < cartas[computador].area)
+            printf("\nComputador venceu!\n");
+        else
+            printf("\nEmpate!\n");
+    }
+
+    if(escolha == 3){
+
+        printf("PIB jogador: %.1f\n", cartas[jogador].PIB);
+        printf("PIB computador: %.1f\n", cartas[computador].PIB);
+
+        if(cartas[jogador]. PIB > cartas[computador].PIB)
+            printf("\nVoce venceu!\n");
+        else if(cartas[jogador]. PIB < cartas[computador].PIB)
+            printf("\nComputador venceu!\n");
+        else
+            printf("\nEmpate!\n");
+    }
+
+    if(escolha == 4){
+
+        printf("Turismo jogador: %d\n", cartas[jogador].turismo);
+        printf("Turismo computador: %d\n", cartas[computador].turismo);
+
+        if(cartas[jogador].turismo > cartas[computador].turismo)
+            printf("\nVoce venceu!\n");
+        else if(cartas[jogador].turismo < cartas[computador].turismo)
+            printf("\nComputador venceu!\n");
+        else
+            printf("\nEmpate!\n");
+    }
+
+    return 0;
+
+}
+
+   
